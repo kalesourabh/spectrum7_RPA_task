@@ -1,0 +1,513 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1094.4,4080.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p9="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upap="clr-namespace:UiPath.PDF.Activities.PDF;assembly=UiPath.PDF.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.PDF.Activities.PDF</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.Storage</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104.8,4016" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="data\Acrobat Document.pdf" Name="pdfPath" />
+      <Variable x:TypeArguments="x:Int32" Name="pdfPageCount" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
+      <Variable x:TypeArguments="s:String[]" Name="pdfFiles" />
+      <Variable x:TypeArguments="x:String" Default="E:\UiPath\spectrum7 task\DOM\DOM\data\extrated pdf" Name="pdfFolderPath" />
+      <Variable x:TypeArguments="p9:DocumentTaxonomy" Name="taxonomy" />
+      <Variable x:TypeArguments="p6:ClassificationResult[]" Name="classificationResults" />
+      <Variable x:TypeArguments="p4:Document" Name="DOM" />
+      <Variable x:TypeArguments="x:String" Name="docText" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="validatedExtractionResults" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="autoExtractionResult" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="extractionResults" />
+      <Variable x:TypeArguments="sd2:DataSet" Name="extractedDataSet" />
+      <Variable x:TypeArguments="sd:Image" Name="image" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="PDF spliting sequence" sap:VirtualizedContainerService.HintSize="1042.4,264.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <upap:GetPDFPageCount DisplayName="Get PDF Page Count" FileName="[pdfPath]" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="GetPDFPageCount_1" PageCount="[pdfPageCount]" />
+      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[counter&lt;=pdfPageCount]" DisplayName="While" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+        <ui:InterruptibleWhile.Body>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,321.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <upap:ExtractPDFPageRange DisplayName="Extract PDF Page Range" FileName="[pdfPath]" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ExtractPDFPageRange_1" OutputFileName="[&quot;E:\UiPath\spectrum7 task\DOM\DOM\data\extrated pdf\&quot;+&quot;pdf &quot;+counter.ToString+&quot;.pdf&quot;]" Range="[counter.ToString]" />
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ui:InterruptibleWhile.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InterruptibleWhile>
+    </Sequence>
+    <Sequence DisplayName="DOM sequence" sap:VirtualizedContainerService.HintSize="1042.4,3599.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="980,105.6" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_3" Taxonomy="[taxonomy]" />
+      <Assign sap:VirtualizedContainerService.HintSize="980,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[pdfFiles]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(pdfFolderPath)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="980,3220" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[pdfFiles]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="944.8,3094.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="882.4,276" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[currentItem]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[currentItem]" DocumentText="[docText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="882.4,300" sap2010:WorkflowViewState.IdRef="DigitizeDocument_4">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument1>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument1>
+                    <ActivityFunc.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                    </ActivityFunc.Argument2>
+                    <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_6" Image="[Image]" Language="auto" PredictionId="[PredictionId]" Profile="None" Scale="1" Timeout="100000" />
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+              </p:DigitizeDocument>
+              <p2:ClassifyDocumentScope ClassificationResults="[classificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[currentItem]" DocumentText="[docText]" sap:VirtualizedContainerService.HintSize="882.4,441.6" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_3" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI8985a22527e94c6e82ec62df9c3e636f&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;SpectrumTask.W9Form.W9&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;SpectrumTask.W9Form.W9&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;SpectrumTask.Receipts.Receipt&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;SpectrumTask.Receipts.Receipt&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;SpectrumTask.Invoices.invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;SpectrumTask.Invoices.invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI8985a22527e94c6e82ec62df9c3e636f&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI8985a22527e94c6e82ec62df9c3e636f&quot;:[]}}">
+                <p2:ClassifyDocumentScope.Classifiers>
+                  <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="233.6,115.2" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_3" LearningFilePath="DocumentProcessing\keyword.json" PersistenceId="UI8985a22527e94c6e82ec62df9c3e636f">
+                    <p2:KeywordBasedClassifier.ClassifierResult>
+                      <OutArgument x:TypeArguments="p3:ClassifierResult">
+                        <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
+                          <DelegateOutArgument x:TypeArguments="p3:ClassifierResult" Name="ClassifierResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p2:KeywordBasedClassifier.ClassifierResult>
+                    <p2:KeywordBasedClassifier.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p4:Document">
+                        <DelegateArgumentValue x:TypeArguments="p4:Document">
+                          <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:KeywordBasedClassifier.DocumentObjectModel>
+                    <p2:KeywordBasedClassifier.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:KeywordBasedClassifier.DocumentPath>
+                    <p2:KeywordBasedClassifier.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:KeywordBasedClassifier.DocumentText>
+                    <p2:KeywordBasedClassifier.DocumentTypes>
+                      <InArgument x:TypeArguments="p3:ClassifierDocumentType[]">
+                        <DelegateArgumentValue x:TypeArguments="p3:ClassifierDocumentType[]">
+                          <DelegateInArgument x:TypeArguments="p3:ClassifierDocumentType[]" Name="DocumentTypes" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:KeywordBasedClassifier.DocumentTypes>
+                    <p2:KeywordBasedClassifier.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p2:KeywordBasedClassifier.PredictionId>
+                  </p2:KeywordBasedClassifier>
+                </p2:ClassifyDocumentScope.Classifiers>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p2:ClassifyDocumentScope>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="882.4,276" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[classificationResults(0).DocumentTypeId.ToString]" />
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
+              <p5:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[classificationResults(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[currentItem]" DocumentText="[docText]" ExtractionResult="[extractionResults]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="882.4,521.6" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI227aa96e7d4345488b507a78835d0b67&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;SpectrumTask.W9Form.W9&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.W9Form.W9.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.BusinessName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.BusinessName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.Individual&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Individual&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.CCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.CCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.SCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.SCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.Partnership&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Partnership&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;SpectrumTask.Receipts.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null},&quot;SpectrumTask.Invoices.invoice&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Invoices.invoice.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.POnumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.POnumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null}}},&quot;UI97463e0dc37c4506b2b83d6a418acbc1&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.W9Form.W9&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.W9Form.W9.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.BusinessName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.BusinessName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.Individual&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Individual&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.CCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.CCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.SCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.SCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.Partnership&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Partnership&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.Receipts.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items.price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.Invoices.invoice&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Invoices.invoice.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;vendor-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;billing-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;billing-addr\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.POnumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.POnumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;po-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;net-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.Tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.Total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;unit-price\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UIebcf66e963bc4add819d574769849b1d&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.W9Form.W9&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.W9Form.W9.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.BusinessName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.BusinessName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.Individual&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Individual&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.CCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.CCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.SCorp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.SCorp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.Partnership&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.Partnership&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.Receipts.Receipt&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Receipts.Receipt.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;items\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;quantity\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.items.description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;description\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SpectrumTask.Receipts.Receipt.items.price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Receipts.Receipt.items.price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;line-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;SpectrumTask.Invoices.invoice&quot;:{&quot;FieldMappings&quot;:{&quot;SpectrumTask.Invoices.invoice.Name&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Name&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.BillingName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.POnumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.POnumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.DueDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.DueDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Tax&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Tax&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.Total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.Total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.qty&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.qty&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.Description&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Description&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.UnitPrice&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SpectrumTask.Invoices.invoice.items.Amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI97463e0dc37c4506b2b83d6a418acbc1&quot;:&quot;0&quot;,&quot;UIebcf66e963bc4add819d574769849b1d&quot;:&quot;0&quot;,&quot;UI227aa96e7d4345488b507a78835d0b67&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI227aa96e7d4345488b507a78835d0b67&quot;:[],&quot;UI97463e0dc37c4506b2b83d6a418acbc1&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;discount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-charges&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-email&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-account-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;iban&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;swift-code&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-routing-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax-rate&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;item-po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;part-no&quot;,&quot;SubOptions&quot;:null}]}]}],&quot;UIebcf66e963bc4add819d574769849b1d&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;expense-type&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
+                <p5:DataExtractionScope.Extractors>
+                  <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="233.6,195.2" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UI227aa96e7d4345488b507a78835d0b67" SerializedSettings="{}{&quot;DocTypeSettings&quot;:[{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Invoices.Invoice&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.W9Form.W9&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Receipts.Receipt&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false}]}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling&quot;,&quot;FormId&quot;:&quot;3e6b87ed&quot;,&quot;FormName&quot;:&quot;certificate&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;CERTIFICATE&quot;,&quot;Box&quot;:[120.27,231.73,86.93,10.93]},{&quot;Text&quot;:&quot;OF&quot;,&quot;Box&quot;:[120.27,320.8,18.13,10.67]},{&quot;Text&quot;:&quot;FILING&quot;,&quot;Box&quot;:[120.53,341.07,44.27,10.4]},{&quot;Text&quot;:&quot;OF&quot;,&quot;Box&quot;:[134.67,299.73,18.13,10.4]},{&quot;Text&quot;:&quot;File&quot;,&quot;Box&quot;:[174.13,254.67,18.13,9.6]},{&quot;Text&quot;:&quot;Number:&quot;,&quot;Box&quot;:[174.13,273.6,38.4,9.6]},{&quot;Text&quot;:&quot;Dated:&quot;,&quot;Box&quot;:[369.33,89.33,29.07,9.33]},{&quot;Text&quot;:&quot;Effective:&quot;,&quot;Box&quot;:[393.6,88.8,42.93,9.6]},{&quot;Text&quot;:&quot;Document:&quot;,&quot;Box&quot;:[668.53,432.0,39.73,8.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.FileNumber&quot;,&quot;Box&quot;:[171.8332,313.1597,57.9003,12.4517]},{&quot;Field&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Dated&quot;,&quot;Box&quot;:[368.5697,118.9135,52.297,10.5839]},{&quot;Field&quot;:&quot;SpectrumTask.Certificate.Certificateoffiling.Effective&quot;,&quot;Box&quot;:[392.8505,133.8555,51.0519,10.5839]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.W9Form.W9&quot;,&quot;FormId&quot;:&quot;72f6c5e7&quot;,&quot;FormName&quot;:&quot;w9 form&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;W-9&quot;,&quot;Box&quot;:[34.67,56.0,42.4,20.53]},{&quot;Text&quot;:&quot;Request&quot;,&quot;Box&quot;:[35.73,236.8,52.27,14.13]},{&quot;Text&quot;:&quot;for&quot;,&quot;Box&quot;:[35.2,291.73,18.4,12.0]},{&quot;Text&quot;:&quot;Taxpayer&quot;,&quot;Box&quot;:[35.2,312.53,58.67,14.4]},{&quot;Text&quot;:&quot;Identification&quot;,&quot;Box&quot;:[50.93,181.07,84.0,12.0]},{&quot;Text&quot;:&quot;Number&quot;,&quot;Box&quot;:[50.67,268.27,49.6,11.73]},{&quot;Text&quot;:&quot;and&quot;,&quot;Box&quot;:[50.67,320.27,23.47,11.73]},{&quot;Text&quot;:&quot;Certification&quot;,&quot;Box&quot;:[50.67,347.2,78.4,11.47]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.Name&quot;,&quot;Box&quot;:[92.3632,71.3374,223.7742,12.7656]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.BusinessName&quot;,&quot;Box&quot;:[117.8945,69.8356,307.8773,12.0147]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.Individual&quot;,&quot;Box&quot;:[150.935,59.3227,17.2712,19.5239]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.CCorp&quot;,&quot;Box&quot;:[153.1877,174.9644,13.5166,15.7693]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.SCorp&quot;,&quot;Box&quot;:[151.6859,244.0491,15.0184,15.0184]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.Partnership&quot;,&quot;Box&quot;:[153.9387,318.3902,14.2675,11.2638]},{&quot;Field&quot;:&quot;SpectrumTask.W9Form.W9.TrustEstate&quot;,&quot;Box&quot;:[153.1877,389.7276,14.2675,12.7656]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Receipts.Receipt&quot;,&quot;FormId&quot;:&quot;1a3fd29d&quot;,&quot;FormName&quot;:&quot;bill&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;#&quot;,&quot;Box&quot;:[72.8,133.33,12.27,11.47]},{&quot;Text&quot;:&quot;Phone&quot;,&quot;Box&quot;:[124.0,197.33,31.73,12.8]},{&quot;Text&quot;:&quot;Date:&quot;,&quot;Box&quot;:[154.4,130.93,29.6,12.8]},{&quot;Text&quot;:&quot;Time:&quot;,&quot;Box&quot;:[149.33,276.27,30.4,13.33]},{&quot;Text&quot;:&quot;Server:&quot;,&quot;Box&quot;:[168.27,130.4,41.87,12.8]},{&quot;Text&quot;:&quot;Bill:&quot;,&quot;Box&quot;:[181.33,129.6,30.13,13.6]},{&quot;Text&quot;:&quot;Table&quot;,&quot;Box&quot;:[176.8,276.53,32.0,14.13]},{&quot;Text&quot;:&quot;Total&quot;,&quot;Box&quot;:[658.13,110.13,65.87,17.33]},{&quot;Text&quot;:&quot;(pen&quot;,&quot;Box&quot;:[730.93,108.27,29.6,17.07]},{&quot;Text&quot;:&quot;Time&quot;,&quot;Box&quot;:[730.93,143.2,29.33,16.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptName&quot;,&quot;Box&quot;:[166.7043,176.4663,82.6012,12.7656]},{&quot;Field&quot;:&quot;SpectrumTask.Receipts.Receipt.ReceiptNumber&quot;,&quot;Box&quot;:[183.2245,163.7006,59.3227,9.011]},{&quot;Field&quot;:&quot;SpectrumTask.Receipts.Receipt.VendorAddress&quot;,&quot;Box&quot;:[92.7387,172.3362,182.8491,28.535]},{&quot;Field&quot;:&quot;SpectrumTask.Receipts.Receipt.TaxAmount&quot;,&quot;Box&quot;:[622.5129,368.7018,35.6687,20.6503]},{&quot;Field&quot;:&quot;SpectrumTask.Receipts.Receipt.Totalvalue&quot;,&quot;Box&quot;:[657.0552,310.5055,99.1215,27.0331]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;SpectrumTask.Invoices.invoice&quot;,&quot;FormId&quot;:&quot;19be200b&quot;,&quot;FormName&quot;:&quot;invoice&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,842.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;INVOICE&quot;,&quot;Box&quot;:[32.82,158.6,73.94,17.84]},{&quot;Text&quot;:&quot;Bill&quot;,&quot;Box&quot;:[194.78,70.7,13.31,9.91]},{&quot;Text&quot;:&quot;To&quot;,&quot;Box&quot;:[194.78,86.78,11.66,9.91]},{&quot;Text&quot;:&quot;Ship&quot;,&quot;Box&quot;:[194.78,192.9,19.95,9.91]},{&quot;Text&quot;:&quot;To&quot;,&quot;Box&quot;:[194.78,215.67,11.56,9.91]},{&quot;Text&quot;:&quot;Invoice&quot;,&quot;Box&quot;:[194.78,375.6,31.64,9.91]},{&quot;Text&quot;:&quot;Invoice&quot;,&quot;Box&quot;:[221.38,360.0,31.63,9.91]},{&quot;Text&quot;:&quot;Date&quot;,&quot;Box&quot;:[221.38,394.45,21.05,9.91]},{&quot;Text&quot;:&quot;Subtotal&quot;,&quot;Box&quot;:[425.68,378.0,36.67,9.91]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.Name&quot;,&quot;Box&quot;:[90.1882,185.824,213.0621,30.8698]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.VendorAddress&quot;,&quot;Box&quot;:[122.2686,240.9054,112.5839,28.4486]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.BillingName&quot;,&quot;Box&quot;:[218.5097,67.1872,79.8983,14.527]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.BillingAddress&quot;,&quot;Box&quot;:[236.6684,65.9766,93.2146,53.2655]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.InvoiceNumber&quot;,&quot;Box&quot;:[191.2716,486.0478,38.7386,15.1322]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.POnumber&quot;,&quot;Box&quot;:[243.9318,475.7579,47.2126,14.527]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.DueDate&quot;,&quot;Box&quot;:[272.3805,470.9156,52.0549,11.5005]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.Subtotal&quot;,&quot;Box&quot;:[421.2818,468.4944,58.1078,15.7375]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.Tax&quot;,&quot;Box&quot;:[443.6775,480.6002,47.8179,12.7111]},{&quot;Field&quot;:&quot;SpectrumTask.Invoices.invoice.Total&quot;,&quot;Box&quot;:[475.1526,454.5727,67.7925,12.1058]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+                    <p5:FormExtractor.DocumentBounds>
+                      <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                        <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                          <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.DocumentBounds>
+                    <p5:FormExtractor.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p4:Document">
+                        <DelegateArgumentValue x:TypeArguments="p4:Document">
+                          <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.DocumentObjectModel>
+                    <p5:FormExtractor.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.DocumentPath>
+                    <p5:FormExtractor.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.DocumentText>
+                    <p5:FormExtractor.ExtractorDocumentType>
+                      <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                        <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                          <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.ExtractorDocumentType>
+                    <p5:FormExtractor.ExtractorResult>
+                      <OutArgument x:TypeArguments="p7:ExtractorResult">
+                        <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                          <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p5:FormExtractor.ExtractorResult>
+                    <p5:FormExtractor.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:FormExtractor.PredictionId>
+                  </p5:FormExtractor>
+                  <p8:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/invoices&quot;,&quot;ApiKey&quot;:&quot;I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/invoices" sap:VirtualizedContainerService.HintSize="233.6,195.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_1" PersistenceId="UI97463e0dc37c4506b2b83d6a418acbc1" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                    <p8:MachineLearningExtractor.AvailableMLSkills>
+                      <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True" />
+                    </p8:MachineLearningExtractor.AvailableMLSkills>
+                    <p8:MachineLearningExtractor.DocumentBounds>
+                      <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                        <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                          <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentBounds>
+                    <p8:MachineLearningExtractor.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p4:Document">
+                        <DelegateArgumentValue x:TypeArguments="p4:Document">
+                          <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentObjectModel>
+                    <p8:MachineLearningExtractor.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentPath>
+                    <p8:MachineLearningExtractor.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentText>
+                    <p8:MachineLearningExtractor.ExtractorDocumentType>
+                      <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                        <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                          <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.ExtractorDocumentType>
+                    <p8:MachineLearningExtractor.ExtractorResult>
+                      <OutArgument x:TypeArguments="p7:ExtractorResult">
+                        <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                          <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p8:MachineLearningExtractor.ExtractorResult>
+                    <p8:MachineLearningExtractor.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.PredictionId>
+                  </p8:MachineLearningExtractor>
+                  <p8:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/receipts&quot;,&quot;ApiKey&quot;:&quot;I9YXrbZi5w7Hn9Yfty+pCO4Zb1vth0f346n1gbvfN+FARjdSc3w+zvFwPVOE4F7qwue6G9WckHuCLmc7Yvcu/g==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Machine Learning Extractor receipts" Endpoint="https://du.uipath.com/ie/receipts" sap:VirtualizedContainerService.HintSize="233.6,195.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_2" PersistenceId="UIebcf66e963bc4add819d574769849b1d" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                    <p8:MachineLearningExtractor.AvailableMLSkills>
+                      <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True" />
+                    </p8:MachineLearningExtractor.AvailableMLSkills>
+                    <p8:MachineLearningExtractor.DocumentBounds>
+                      <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                        <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                          <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentBounds>
+                    <p8:MachineLearningExtractor.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p4:Document">
+                        <DelegateArgumentValue x:TypeArguments="p4:Document">
+                          <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentObjectModel>
+                    <p8:MachineLearningExtractor.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentPath>
+                    <p8:MachineLearningExtractor.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.DocumentText>
+                    <p8:MachineLearningExtractor.ExtractorDocumentType>
+                      <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                        <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                          <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.ExtractorDocumentType>
+                    <p8:MachineLearningExtractor.ExtractorResult>
+                      <OutArgument x:TypeArguments="p7:ExtractorResult">
+                        <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                          <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p8:MachineLearningExtractor.ExtractorResult>
+                    <p8:MachineLearningExtractor.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p8:MachineLearningExtractor.PredictionId>
+                  </p8:MachineLearningExtractor>
+                </p5:DataExtractionScope.Extractors>
+              </p5:DataExtractionScope>
+              <p5:ExportExtractionResults DataSet="[extractedDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[extractionResults]" sap:VirtualizedContainerService.HintSize="882.4,176.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False" />
+              <If Condition="[classificationResults(0).DocumentTypeId.ToString.Equals(&quot;SpectrumTask.Invoices.invoice&quot;) = true OR classificationResults(0).DocumentTypeId.ToString.Equals(&quot;SpectrumTask.Receipts.Receipt&quot;) = true]" sap:VirtualizedContainerService.HintSize="882.4,750.4" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376.8,361.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[extractedDataSet.Tables(0)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;data\output\Dom Output &quot;+classificationResults(0).DocumentId.ToString+&quot;.xlsx&quot;]" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[extractedDataSet.Tables(2)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet2" WorkbookPath="[&quot;data\output\Dom Output &quot;+classificationResults(0).DocumentId.ToString+&quot;.xlsx&quot;]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[extractedDataSet.Tables(0)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" WorkbookPath="[&quot;data\output\Dom Output &quot;+classificationResults(0).DocumentId.ToString+&quot;.xlsx&quot;]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>
